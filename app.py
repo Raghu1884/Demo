@@ -7,9 +7,6 @@ app = Flask(__name__)
 with open("GB.pkl", "rb") as f:
     GB_pickled_model = pickle.load(f)
 
-@app.route("/", methods=["GET"])
-def home():
-    return "Hello, Flask is up and running!"
 
 @app.route("/predict", methods=["POST"])
 def predict():
